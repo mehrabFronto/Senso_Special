@@ -97,6 +97,7 @@ const FoodCard = ({
 }: FoodCardProps) => {
   return (
     <div
+      dir="rtl"
       className={`min-w-[250px] p-md bg-gradient-to-br from-[#3A3A3A] to-[#4A4A4A] rounded-2xl border border-[#7A7A7A] flex flex-col items-center gap-y-xs transition-all duration-200 ${
         isActive ? "scale-100 blur-0" : "scale-[0.80] blur-[2px]"
       }`}

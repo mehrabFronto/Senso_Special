@@ -7,7 +7,7 @@ const SearchBar = () => {
   const [searchValue, setSearchValue] = useState("");
 
   return (
-    <section className="px-md">
+    <section className="px-md" dir="rtl">
       <form
         onSubmit={(e) => e.preventDefault()}
         className="w-full flex items-center"

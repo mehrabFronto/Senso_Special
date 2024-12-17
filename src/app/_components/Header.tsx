@@ -19,7 +19,10 @@ const Header = () => {
           کافه رستوران ایتالیایی حس خاص
         </h1>
 
-        <ul className="w-full flex items-center justify-between lg:justify-around text-center text-xs lg:text-sm font-bold">
+        <ul
+          dir="rtl"
+          className="w-full flex items-center justify-between lg:justify-around text-center text-xs lg:text-sm font-bold"
+        >
           <li>
             <button className="flex items-center gap-x-sm p-1">
               <Image

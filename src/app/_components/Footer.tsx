@@ -9,7 +9,10 @@ const certificate = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#3A3A3A] flex flex-col items-center gap-y-xs p-md font-bold">
+    <footer
+      dir="rtl"
+      className="bg-[#3A3A3A] flex flex-col items-center gap-y-xs p-md font-bold"
+    >
       <Image
         src="/images/senso-logo.webp"
         alt="logo"
@@ -20,7 +23,7 @@ const Footer = () => {
       <div className="text-center flex flex-col items-center">
         <p>کافه رستوران ایتالیایی حس خاص</p>
         <p>کرج، فردیس، فلکه سوم، خیابان سی و یکم(دهم غربی قدیم)</p>
-        <p>36502521-026</p>
+        <p>026-36502521</p>
         <p>Instagram: senso_speciale</p>
       </div>
 
