@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import FarhangFont from "@/constants/localFonts";
+import Header from "./_components/Header";
 
 export const metadata: Metadata = {
   title: "Senso Special Cafe Restaurant",
@@ -16,7 +17,8 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body className={`font-sans ${FarhangFont.variable}`}>
-        <main>{children}</main>
+        <Header />
+        {children}
       </body>
     </html>
   );
