@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./_components/Header";
 import SearchBar from "./_components/SearchBar";
 import Menu from "./_components/Menu";
+import Foods from "./_components/Foods";
 
 const HomePage = () => {
   return (
@@ -9,6 +10,7 @@ const HomePage = () => {
       <Header />
       <SearchBar />
       <Menu />
+      <Foods />
     </div>
   );
 };
