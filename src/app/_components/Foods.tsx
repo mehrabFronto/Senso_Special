@@ -1,34 +1,81 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import { foodsData } from "../_data/foodsData";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import { Swiper as SwiperType } from "swiper";
+import Menu from "./Menu";
 
 const Foods = () => {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const swiperRef = useRef<SwiperType | null>(null);
+
+  // تغییر اسلایدر با کلیک روی دسته‌بندی
+  const handleCategoryClick = (category: string) => {
+    if (swiperRef.current) {
+      const targetIndex = foodsData.findIndex(
+        (food) => food.category === category
+      );
+      if (targetIndex !== -1) {
+        swiperRef.current.slideToLoop(targetIndex); // رفتن به اسلاید مناسب
+      }
+
+      // به‌روزرسانی searchParams
+      const params = new URLSearchParams(searchParams);
+      params.set("category", category);
+      router.replace(`?${params.toString()}`, { scroll: false });
+    }
+  };
+
+  // تغییر searchParams هنگام تغییر اسلاید
+  const handleSlideChange = () => {
+    if (swiperRef.current) {
+      const activeIndex = swiperRef.current.realIndex;
+      const activeCategory = foodsData[activeIndex]?.category;
+
+      if (activeCategory) {
+        const params = new URLSearchParams(searchParams);
+        params.set("category", activeCategory);
+        router.replace(`?${params.toString()}`, { scroll: false });
+      }
+    }
+  };
+
   return (
-    <section className="p-md foods__slider">
-      <Swiper
-        slidesPerView={1.4}
-        spaceBetween={0}
-        centeredSlides={true}
-        loop={true}
-        className="w-full"
-        breakpoints={{
-          1024: {
-            slidesPerView: 3,
-          },
-        }}
-      >
-        {foodsData.map((food) => (
-          <SwiperSlide key={food.id}>
-            {({ isActive }) => <FoodCard foodData={food} isActive={isActive} />}
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </section>
+    <>
+      <Menu onCategoryClick={handleCategoryClick} />
+
+      <section className="p-md space-y-xl" dir="ltr">
+        {/* ارسال تابع برای کلیک */}
+        <Swiper
+          slidesPerView={1.4}
+          spaceBetween={0}
+          centeredSlides={true}
+          loop={true}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          onSlideChange={handleSlideChange} // رویداد تغییر اسلاید
+          className="w-full foods__slider"
+          breakpoints={{
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+        >
+          {foodsData.map((food) => (
+            <SwiperSlide key={food.id}>
+              {({ isActive }) => (
+                <FoodCard foodData={food} isActive={isActive} />
+              )}
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
+    </>
   );
 };
 
