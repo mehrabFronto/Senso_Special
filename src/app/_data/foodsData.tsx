@@ -4,7 +4,7 @@ export const foodsData = [
     label: "چیـــز برگـــر",
     category: "burger",
     description: "پاستا، سینه مرغ، سبزیجات معطر، سس مخصوص و...",
-    price: "125/000 تومان",
+    price: "125,000 تومان",
     img: "/images/burger.webp",
   },
   {
@@ -12,7 +12,7 @@ export const foodsData = [
     label: "پاستــا چیـــکن آلفـــردو",
     category: "pasta",
     description: "پاستا، سینه مرغ، سبزیجات معطر، سس مخصوص و...",
-    price: "125/000 تومان",
+    price: "125,000 تومان",
     img: "/images/pasta.webp",
   },
   {
@@ -20,7 +20,7 @@ export const foodsData = [
     label: "پیتزا پپرونی ایتالیایی",
     category: "pizza",
     description: "پاستا، سینه مرغ، سبزیجات معطر، سس مخصوص و...",
-    price: "125/000 تومان",
+    price: "125,000 تومان",
     img: "/images/pizza.webp",
   },
   {
@@ -28,7 +28,7 @@ export const foodsData = [
     label: "ســـالاد ســـزار",
     category: "appetizer",
     description: "پاستا، سینه مرغ، سبزیجات معطر، سس مخصوص و...",
-    price: "125/000 تومان",
+    price: "125,000 تومان",
     img: "/images/salad.webp",
   },
 ];
