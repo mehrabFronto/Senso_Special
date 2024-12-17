@@ -9,7 +9,7 @@ const Menu = () => {
         مـنــــو<span className="block text-primary">|</span>Menu
       </h2>
 
-      <ul className="w-full flex items-center justify-between">
+      <ul className="w-full flex items-center justify-between lg:justify-around">
         {menu.map(({ id, label, icon, category }) => (
           <li key={id} className="flex flex-col text-center gap-y-xs">
             <Image

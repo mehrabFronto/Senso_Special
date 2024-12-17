@@ -6,7 +6,7 @@ import Foods from "./_components/Foods";
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen container max-w-screen-lg mx-auto">
       <Header />
       <SearchBar />
       <Menu />
