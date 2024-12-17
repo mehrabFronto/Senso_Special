@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { Suspense, useRef } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { foodsData } from "../_data/foodsData";
 import Image from "next/image";
@@ -48,7 +48,9 @@ const Foods = () => {
 
   return (
     <>
-      <Menu onCategoryClick={handleCategoryClick} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Menu onCategoryClick={handleCategoryClick} />
+      </Suspense>
 
       <section className="p-md space-y-xl" dir="ltr">
         {/* ارسال تابع برای کلیک */}
