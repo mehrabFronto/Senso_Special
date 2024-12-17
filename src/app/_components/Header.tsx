@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="p-md">
+    <header className="p-md max-w-screen-lg mx-auto">
       <nav className="w-full flex flex-col items-center justify-center gap-y-sm lg:gap-y-md">
         <Image
           src="/images/senso-logo.webp"
