@@ -1,8 +1,6 @@
 import React from "react";
-import dynamic from "next/dynamic";
 import { openingHours } from "./_constants/openingHours";
-
-const MapComponent = dynamic(() => import("./_components/MapComponent"));
+import MapWrapper from "./_components/MapWrapper";
 
 const AboutPage = () => {
   return (
@@ -17,7 +15,7 @@ const AboutPage = () => {
           </p>
         </div>
 
-        <MapComponent />
+        <MapWrapper />
 
         <div dir="rtl" className="flex flex-col items-center gap-y-xs">
           {openingHours.map(({ day, hours }, index) => (
