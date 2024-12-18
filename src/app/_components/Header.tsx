@@ -7,13 +7,15 @@ const Header = () => {
   return (
     <header className="p-md max-w-screen-lg mx-auto">
       <nav className="w-full flex flex-col items-center justify-center gap-y-sm lg:gap-y-md">
-        <Image
-          src="/images/senso-logo.webp"
-          alt="logo"
-          width={100}
-          height={100}
-          className="lg:w-[150px] lg:h-[150px]"
-        />
+        <Link href="/">
+          <Image
+            src="/images/senso-logo.webp"
+            alt="logo"
+            width={100}
+            height={100}
+            className="lg:w-[150px] lg:h-[150px]"
+          />
+        </Link>
 
         <h1 className="font-bold text-center lg:text-xl">
           کافه رستوران ایتالیایی حس خاص

@@ -3,7 +3,7 @@ export const headerLinks = [
     id: 1,
     label: "تماس با ما/درباره ما",
     icon: "/icons/call.svg",
-    href: "/contact",
+    href: "/about",
   },
   {
     id: 2,
