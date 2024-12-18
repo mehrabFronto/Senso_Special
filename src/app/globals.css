@@ -24,3 +24,7 @@ body {
   );
   mask-image: linear-gradient(90deg, transparent, #fff, #fff, transparent);
 }
+
+.leaflet-control-attribution {
+  display: none !important; /* پنهان کردن واترمارک */
+}
