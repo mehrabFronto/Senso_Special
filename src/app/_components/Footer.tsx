@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer
       dir="rtl"
-      className="bg-[#3A3A3A] flex flex-col items-center gap-y-xs p-md font-bold"
+      className="bg-secondary flex flex-col items-center gap-y-xs p-md font-bold"
     >
       <Image
         src="/images/senso-logo.webp"

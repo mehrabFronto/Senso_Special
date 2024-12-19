@@ -108,7 +108,7 @@ const TextFiled = ({
           name={keyName}
           id={keyName}
           onChange={handleChange}
-          className="w-full bg-[#3A3A3A] rounded-l-lg p-2.5 placeholder:text-[#777] border border-[#777] border-r-0 outline-none"
+          className="w-full bg-secondary rounded-l-lg p-2.5 placeholder:text-dark-gray border border-dark-gray border-r-0 outline-none"
           placeholder={placeholder}
         />
       </div>

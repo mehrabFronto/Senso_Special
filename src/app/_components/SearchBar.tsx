@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
+import { useDarkMode } from "../contexts/DarkModeProvider";
 
 const SearchBar = () => {
   const [searchValue, setSearchValue] = useState("");
+  const { isDarkMode } = useDarkMode();
 
   return (
     <section className="px-md" dir="rtl">
@@ -16,14 +18,16 @@ const SearchBar = () => {
           type="text"
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
-          className="w-full bg-[#3A3A3A] rounded-r-lg p-2.5 placeholder:text-[#777] border border-[#777] border-l-0 outline-none"
+          className="w-full bg-secondary rounded-r-lg p-2.5 placeholder:text-dark-gray border border-dark-gray border-l-0 outline-none"
           placeholder="برای جستجو قسمتی از نام محصول را بنویسید..."
         />
 
         <button
           type="submit"
           title="search"
-          className="bg-primary border border-primary rounded-l-lg overflow-hidden py-1 px-2"
+          className={`bg-primary rounded-l-lg overflow-hidden py-1 px-2 relative left-[2px] border border-r-0 ${
+            isDarkMode ? "border-primary" : "border-dark-gray"
+          }`}
         >
           <Image
             src="/icons/search.svg"

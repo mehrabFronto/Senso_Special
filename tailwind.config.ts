@@ -14,6 +14,9 @@ export default {
         background: "var(--background-color)",
         foreground: "var(--foreground-color)",
         primary: "var(--primary-color)",
+        secondary: "var(--secondary-color)",
+        "dark-gray": "var(--dark-gray-color)",
+        "light-gray": "var(--light-gray-color)",
       },
 
       fontFamily: {

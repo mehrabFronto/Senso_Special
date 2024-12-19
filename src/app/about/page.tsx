@@ -5,7 +5,7 @@ import MapWrapper from "./_components/MapWrapper";
 const AboutPage = () => {
   return (
     <main className="p-2xl pb-4xl max-w-screen-lg mx-auto">
-      <div className="w-full space-y-xl bg-[#2A2A2A] p-xl rounded-xl border border-[#5A5A5A]">
+      <div className="w-full space-y-xl bg-secondary p-xl rounded-xl border border-light-gray">
         <div className="text-center font-bold flex flex-col items-center gap-y-xs">
           <p>کافه رستوران ایتالیایی حس خاص</p>
           <p>کرج، فردیس، فلکه سوم، خیابان سی و یکم(دهم غربی قدیم)</p>
