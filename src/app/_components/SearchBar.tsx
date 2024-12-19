@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import { useDarkMode } from "../contexts/DarkModeProvider";
+import { useDarkMode } from "../../contexts/DarkModeProvider";
 
 const SearchBar = () => {
   const [searchValue, setSearchValue] = useState("");

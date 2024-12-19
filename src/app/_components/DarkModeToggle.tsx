@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useDarkMode } from "../contexts/DarkModeProvider";
+import { useDarkMode } from "../../contexts/DarkModeProvider";
 
 const DarkModeToggle = () => {
   const { toggleDarkMode, isDarkMode } = useDarkMode();

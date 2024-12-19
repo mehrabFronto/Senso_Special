@@ -3,7 +3,7 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { useDarkMode } from "@/app/contexts/DarkModeProvider";
+import { useDarkMode } from "@/contexts/DarkModeProvider";
 
 const customIcon = L.icon({
   iconUrl: "/icons/map-marker-green.png",
