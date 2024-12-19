@@ -2,7 +2,6 @@
 
 import React, { useRef } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import { foodsData } from "../_data/foodsData";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -10,7 +9,24 @@ import "swiper/css/pagination";
 import { Swiper as SwiperType } from "swiper";
 import Menu from "./Menu";
 
-const Foods = () => {
+type Props = {
+  foodsData: {
+    id: number;
+    label: string;
+    category: string;
+    description: string;
+    price: string;
+    img: string;
+  }[];
+  availableCategories: {
+    id: number;
+    icon: string;
+    category: string;
+    label: string;
+  }[];
+};
+
+const Foods = ({ foodsData, availableCategories }: Props) => {
   const searchParams = useSearchParams();
   const router = useRouter();
   const swiperRef = useRef<SwiperType | null>(null);
@@ -48,7 +64,7 @@ const Foods = () => {
 
   return (
     <>
-      <Menu onCategoryClick={handleCategoryClick} />
+      <Menu onCategoryClick={handleCategoryClick} menu={availableCategories} />
 
       <section className="p-md space-y-xl" dir="ltr">
         {/* ارسال تابع برای کلیک */}
@@ -113,7 +129,7 @@ const FoodCard = ({
         className="object-cover w-full"
       />
 
-      <h3 className="font-bold text-xl lg:text-2xl">{label}</h3>
+      <h3 className="font-bold text-xl lg:text-2xl tracking-wide">{label}</h3>
       <p className="text-xs lg:text-sm">{description}</p>
 
       <span className="w-full flex items-center justify-center bg-primary text-background text-2xl font-bold py-1 rounded-lg mt-2">

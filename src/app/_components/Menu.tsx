@@ -2,14 +2,19 @@
 
 import React from "react";
 import { useSearchParams } from "next/navigation";
-import { menu } from "../_constants/menu";
 import Image from "next/image";
 
-const Menu = ({
-  onCategoryClick,
-}: {
+type Props = {
   onCategoryClick: (category: string) => void;
-}) => {
+  menu: {
+    id: number;
+    icon: string;
+    category: string;
+    label: string;
+  }[];
+};
+
+const Menu = ({ onCategoryClick, menu }: Props) => {
   const searchParams = useSearchParams();
   const currentCategory = searchParams.get("category")?.toString() || "";
 
@@ -19,18 +24,20 @@ const Menu = ({
 
   return (
     <section dir="rtl" className="p-md space-y-xs">
-      <h2 className="w-full text-center font-bold flex items-center justify-center gap-x-xs">
-        مـنــــو<span className="block text-primary">|</span>Menu
-      </h2>
+      {!!menu.length && (
+        <h2 className="w-full text-center font-bold flex items-center justify-center gap-x-xs">
+          مـنــــو<span className="block text-primary">|</span>Menu
+        </h2>
+      )}
 
       <ul
         dir="ltr"
-        className="w-full flex items-center justify-between lg:justify-around"
+        className="w-full flex items-center justify-center lg:justify-around"
       >
         {menu.map(({ id, label, icon, category }) => (
           <li
             key={id}
-            className="flex flex-col text-center gap-y-xs cursor-pointer relative"
+            className="flex flex-col items-center text-center gap-y-xs cursor-pointer relative flex-1 max-w-[100px]"
             onClick={() => handleCategoryClick(category)}
           >
             <Image

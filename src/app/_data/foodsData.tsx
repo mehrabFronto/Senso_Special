@@ -1,7 +1,7 @@
 export const foodsData = [
   {
     id: 5,
-    label: "پاستــا چیـــکن آلفـــردو",
+    label: "پاستا چیکن آلفردو",
     category: "pasta",
     description: "پاستا، سینه مرغ، سبزیجات معطر، سس مخصوص و...",
     price: "125,000 تومان",
@@ -9,7 +9,7 @@ export const foodsData = [
   },
   {
     id: 6,
-    label: "پاستــا چیـــکن آلفـــردو",
+    label: "پاستا چیکن آلفردو",
     category: "pasta",
     description: "پاستا، سینه مرغ، سبزیجات معطر، سس مخصوص و...",
     price: "125,000 تومان",
@@ -17,7 +17,7 @@ export const foodsData = [
   },
   {
     id: 7,
-    label: "پاستــا چیـــکن آلفـــردو",
+    label: "پاستا چیکن آلفردو",
     category: "pasta",
     description: "پاستا، سینه مرغ، سبزیجات معطر، سس مخصوص و...",
     price: "125,000 تومان",
@@ -25,7 +25,7 @@ export const foodsData = [
   },
   {
     id: 8,
-    label: "پاستــا چیـــکن آلفـــردو",
+    label: "پاستا چیکن آلفردو",
     category: "pasta",
     description: "پاستا، سینه مرغ، سبزیجات معطر، سس مخصوص و...",
     price: "125,000 تومان",
@@ -65,7 +65,7 @@ export const foodsData = [
   },
   {
     id: 13,
-    label: "ســـالاد ســـزار",
+    label: "سالاد سزار",
     category: "appetizer",
     description: "پاستا، سینه مرغ، سبزیجات معطر، سس مخصوص و...",
     price: "125,000 تومان",
@@ -73,7 +73,7 @@ export const foodsData = [
   },
   {
     id: 14,
-    label: "ســـالاد ســـزار",
+    label: "سالاد سزار",
     category: "appetizer",
     description: "پاستا، سینه مرغ، سبزیجات معطر، سس مخصوص و...",
     price: "125,000 تومان",
@@ -81,7 +81,7 @@ export const foodsData = [
   },
   {
     id: 15,
-    label: "ســـالاد ســـزار",
+    label: "سالاد سزار",
     category: "appetizer",
     description: "پاستا، سینه مرغ، سبزیجات معطر، سس مخصوص و...",
     price: "125,000 تومان",
@@ -89,7 +89,7 @@ export const foodsData = [
   },
   {
     id: 16,
-    label: "ســـالاد ســـزار",
+    label: "سالاد سزار",
     category: "appetizer",
     description: "پاستا، سینه مرغ، سبزیجات معطر، سس مخصوص و...",
     price: "125,000 تومان",
@@ -97,7 +97,7 @@ export const foodsData = [
   },
   {
     id: 1,
-    label: "چیـــز برگـــر",
+    label: "چیز برگر",
     category: "burger",
     description: "پاستا، سینه مرغ، سبزیجات معطر، سس مخصوص و...",
     price: "125,000 تومان",
@@ -105,7 +105,7 @@ export const foodsData = [
   },
   {
     id: 2,
-    label: "چیـــز برگـــر",
+    label: "چیز برگر",
     category: "burger",
     description: "پاستا، سینه مرغ، سبزیجات معطر، سس مخصوص و...",
     price: "125,000 تومان",
@@ -113,7 +113,7 @@ export const foodsData = [
   },
   {
     id: 3,
-    label: "چیـــز برگـــر",
+    label: "چیز برگر",
     category: "burger",
     description: "پاستا، سینه مرغ، سبزیجات معطر، سس مخصوص و...",
     price: "125,000 تومان",
@@ -121,7 +121,7 @@ export const foodsData = [
   },
   {
     id: 4,
-    label: "چیـــز برگـــر",
+    label: "چیز برگر",
     category: "burger",
     description: "پاستا، سینه مرغ، سبزیجات معطر، سس مخصوص و...",
     price: "125,000 تومان",
