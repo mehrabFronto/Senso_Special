@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { headerLinks } from "../_constants/headerLinks";
 import Link from "next/link";
+import DarkModeToggle from "./DarkModeToggle";
 
 const Header = () => {
   return (
@@ -26,16 +27,7 @@ const Header = () => {
           className="w-full flex items-center justify-between lg:justify-around text-center text-xs lg:text-sm font-bold"
         >
           <li>
-            <button className="flex items-center gap-x-sm p-1">
-              <Image
-                src="/icons/theme.svg"
-                alt="icon"
-                width={16}
-                height={16}
-                className="lg:w-5 lg:h-5"
-              />
-              <span>پوسته روشن</span>
-            </button>
+            <DarkModeToggle />
           </li>
 
           {headerLinks.map(({ id, label, icon, href }) => (

@@ -3,6 +3,7 @@ import "./globals.css";
 import FarhangFont from "@/constants/localFonts";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
+import DarkModeProvider from "./contexts/DarkModeProvider";
 
 export const metadata: Metadata = {
   title: "Senso Special Cafe Restaurant",
@@ -18,9 +19,11 @@ export default function RootLayout({
   return (
     <html lang="fa">
       <body className={`font-sans ${FarhangFont.variable}`}>
-        <Header />
-        {children}
-        <Footer />
+        <DarkModeProvider>
+          <Header />
+          {children}
+          <Footer />
+        </DarkModeProvider>
       </body>
     </html>
   );

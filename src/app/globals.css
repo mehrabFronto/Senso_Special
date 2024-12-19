@@ -8,6 +8,19 @@
   --primary-color: #25e521;
 }
 
+:root {
+  &,
+  &.light-mode {
+    --background-color: #fff;
+    --foreground-color: #000;
+    --primary-color: #25e521;
+  }
+  &.dark-mode {
+    --background-color: #000;
+    --foreground-color: #fff;
+  }
+}
+
 body {
   color: var(--foreground-color);
   background-color: var(--background-color);
