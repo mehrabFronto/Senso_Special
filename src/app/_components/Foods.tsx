@@ -102,7 +102,7 @@ const FoodCard = ({
     <div
       dir="rtl"
       className={`min-w-[250px] p-md bg-secondary rounded-2xl border border-dark-gray flex flex-col items-center gap-y-xs transition-all duration-200 ${
-        isActive ? "scale-100 blur-0" : "scale-[0.80] blur-sm"
+        isActive ? "scale-100 blur-0" : "scale-[0.80] blur-[3px]"
       }`}
     >
       <Image
