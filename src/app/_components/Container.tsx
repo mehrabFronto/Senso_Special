@@ -28,12 +28,19 @@ const Container = () => {
     setAvailableCategories(newCategories);
   };
 
+  const handleClearSearch = () => {
+    setSearchValue("");
+    setFilteredFoods(foodsData);
+    setAvailableCategories(menu);
+  };
+
   return (
     <div className="container max-w-screen-lg mx-auto mb-4xl space-y-8">
       <SearchBar
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
         onSubmit={handleSearchFoods}
+        onClear={handleClearSearch}
       />
 
       {/* Menu and Foods with integrated functionality */}
